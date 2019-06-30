@@ -1,0 +1,23 @@
+[user]
+	name = Alex Avila
+	email = alex.avilx@icloud.com
+[color]
+	ui = auto
+[merge]
+	conflictstyle = diff3
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	purge = "!f() { git branch -d $1; git push origin :$1; }; f"
+	purge-f = "!f() { git branch -D $1; git push origin :$1; }; f"
+	sync = "!f() { git fetch origin && git pull --ff-only origin $1; }; f"
+[core]
+	editor = code --wait
+	excludesfile = /Users/alex/.gitignore_global
+[pull]
+	rebase = true
+[push]
+	default = current
+[fetch]
+	prune = true
